@@ -1,10 +1,10 @@
 {
-  "uuid": "notchnux@adityasah.programs",
-  "name": "NotchNux",
-  "description": "A dynamic pill-shaped Notch and dashboard panel for media, system monitoring, weather, files shelf, wallpaper rotation, and connected devices.",
-  "version": 4,
-  "version-name": "1.3.0",
-  "url": "https://github.com/Adityasah2004/NotchNux",
+  "uuid": "pulsar-notch@inled.es",
+  "name": "Pulsar Notch",
+  "description": "macOS-style dynamic notch and dashboard for Pulsar OS: media, system monitoring, weather, files shelf, wallpaper rotation, and connected devices.",
+  "version": 5,
+  "version-name": "1.3.1",
+  "url": "https://github.com/Inled-Pulsar-OS/pulsar-notch",
   "shell-version": [
     "45",
     "46",
