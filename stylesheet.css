@@ -1685,6 +1685,13 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+/* Same metrics as the old drag handle, so the row does not shift now that the
+   thumbnail is inert and "Save a copy" is an explicit action. */
+.nook-shelf-thumb-holder {
+    padding: 4px;
+    border-radius: 8px;
+}
+
 .nook-shelf-row-icon {
     color: rgba(255, 255, 255, 0.8);
 }
@@ -1772,36 +1779,119 @@
     margin-right: 5px;
 }
 
-/* Quick-share footer: status + device hint below the file list / drop zone. */
-.nook-share-box {
-    spacing: 4px;
-    margin-top: 4px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+.nook-shelf-header-icon {
+    color: #7aa2ff;
+    margin-right: 6px;
 }
 
-.nook-share-title {
+.nook-shelf-hdr-btn {
     font-size: 11px;
     font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 3px 8px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.06);
+    transition: all 120ms ease-out;
+}
+
+.nook-shelf-hdr-btn:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nook-scan-btn {
+    font-size: 10.5px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 2px 7px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nook-scan-btn:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Live FlyDrop Progress Card */
+.nook-flydrop-progress {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 10px 12px;
+    spacing: 8px;
+}
+
+.nook-flydrop-icon {
+    color: #7aa2ff;
+    margin-right: 8px;
+}
+
+.nook-flydrop-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #f4f4f6;
+}
+
+.nook-flydrop-speed {
+    font-size: 11px;
     color: rgba(255, 255, 255, 0.5);
 }
 
-.nook-share-devlabel {
-    font-size: 11px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.4);
+.nook-flydrop-bar-bg {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
 }
 
-.nook-share-sub {
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.42);
+.nook-flydrop-bar-fill {
+    border-radius: 3px;
+}
+
+/* Nearby FlyDrop Devices */
+.nook-flydrop-devices-box {
+    spacing: 6px;
     margin-top: 2px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nook-devices-scroll {
+    max-height: 48px;
+}
+
+.nook-devices-row {
+    spacing: 6px;
+}
+
+.nook-device-chip {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 6px 10px;
+    transition: all 120ms ease-out;
+}
+
+.nook-device-chip:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.nook-device-chip-name {
+    font-size: 11.5px;
+    font-weight: bold;
+    color: #f4f4f6;
+    max-width: 140px;
+}
+
+.nook-device-chip-sub {
+    font-size: 9.5px;
+    color: rgba(255, 255, 255, 0.45);
 }
 
 .nook-share-status {
     font-size: 10.5px;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.7);
     margin-top: 2px;
 }
 
@@ -1911,4 +2001,404 @@
     font-size: 11px;
     color: rgba(255, 255, 255, 0.42);
     margin-top: 2px;
+}
+
+/* PulsarOS MacBook-notch tweak */
+.notchnux-island {
+    border-radius: 0px 0px 22px 22px !important;
+    border-top: 0px !important;
+    background-color: #000000 !important;
+    box-shadow: 0px 5px 14px rgba(0,0,0,0.35) !important;
+}
+
+.notchnux-island-expanded {
+    border-radius: 0px 0px 28px 28px !important;
+    border-top: 0px !important;
+}
+
+.notchnux-island-peek {
+    border-radius: 0px 0px 24px 24px !important;
+    border-top: 0px !important;
+}
+
+/* PulsarOS: strict notch containment */
+.nook-tray-rightcol {
+    width: 200px;
+}
+
+.nook-tray-mirror-beside {
+    width: 200px;
+    max-width: 200px;
+}
+
+.nook-tray-mirror-scroll {
+    width: 172px;
+}
+
+.nook-tray-mirror-row {
+    spacing: 5px;
+}
+
+.nook-tray-mirror-beside .nook-tray-mirror-btn {
+    padding: 6px;
+}
+
+
+/* PULSAR_MAC_PASS_V1 */
+
+/* ---------------------------------------------------------
+   MACBOOK NOTCH
+   --------------------------------------------------------- */
+
+.notchnux-island {
+    background-color: #000000 !important;
+    border: 0px !important;
+    border-top: 0px !important;
+
+    border-radius: 0px 0px 18px 18px !important;
+
+    padding: 0px 12px !important;
+    box-shadow: none !important;
+
+    color: #ffffff !important;
+}
+
+/* Expanded notch / Control Center */
+.notchnux-island-expanded {
+    background-color: rgba(28, 28, 30, 0.96) !important;
+
+    border: 0px !important;
+    border-radius: 0px 0px 26px 26px !important;
+
+    padding: 12px 14px 16px 14px !important;
+
+    box-shadow:
+        0px 18px 46px rgba(0, 0, 0, 0.46) !important;
+}
+
+/* Notification expansion */
+.notchnux-island-peek {
+    background-color: rgba(28, 28, 30, 0.97) !important;
+    border: 0px !important;
+    border-radius: 0px 0px 22px 22px !important;
+    box-shadow: 0px 14px 36px rgba(0,0,0,0.42) !important;
+}
+
+
+/* ---------------------------------------------------------
+   NOTCH CONTENT
+   --------------------------------------------------------- */
+
+.notchnux-pill-content {
+    height: 34px !important;
+    padding: 0px 8px !important;
+    spacing: 7px !important;
+}
+
+.notchnux-pill-clock {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0px !important;
+    color: rgba(255,255,255,0.92) !important;
+}
+
+.notchnux-pill-icon,
+.notchnux-pill-priv {
+    color: rgba(255,255,255,0.82) !important;
+}
+
+.notchnux-pill-battery-pct {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+}
+
+
+/* ---------------------------------------------------------
+   MACOS SEGMENTED TAB BAR
+   --------------------------------------------------------- */
+
+.notchnux-dashboard-header-wrap {
+    spacing: 8px !important;
+    margin-bottom: 14px !important;
+}
+
+.notchnux-tab-strip {
+    spacing: 2px !important;
+    padding: 3px !important;
+
+    background-color: rgba(118,118,128,0.18) !important;
+
+    border: 0px !important;
+    border-radius: 11px !important;
+}
+
+.notchnux-tab-btn {
+    padding: 6px 11px !important;
+
+    border: 0px !important;
+    border-radius: 8px !important;
+
+    background-color: transparent !important;
+
+    color: rgba(255,255,255,0.58) !important;
+
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.notchnux-tab-btn:hover {
+    background-color: rgba(255,255,255,0.08) !important;
+    color: rgba(255,255,255,0.90) !important;
+}
+
+.notchnux-tab-btn-active {
+    background-color: rgba(255,255,255,0.15) !important;
+
+    border: 0px !important;
+
+    color: #ffffff !important;
+}
+
+.notchnux-tab-btn-active .notchnux-tab-icon {
+    color: #0a84ff !important;
+}
+
+.notchnux-tab-icon {
+    color: rgba(255,255,255,0.65) !important;
+}
+
+
+/* ---------------------------------------------------------
+   CONTROL CENTER BUTTONS
+   --------------------------------------------------------- */
+
+.notchnux-settings-btn,
+.notchnux-power-btn {
+    width: 32px !important;
+    height: 32px !important;
+
+    border-radius: 10px !important;
+
+    background-color: rgba(255,255,255,0.08) !important;
+
+    border: 0px !important;
+
+    color: rgba(255,255,255,0.78) !important;
+}
+
+.notchnux-settings-btn:hover {
+    background-color: rgba(255,255,255,0.14) !important;
+    color: #ffffff !important;
+}
+
+.notchnux-power-btn:hover {
+    background-color: rgba(255,69,58,0.24) !important;
+    color: #ff6961 !important;
+}
+
+
+/* ---------------------------------------------------------
+   APPLE-STYLE CARDS
+   --------------------------------------------------------- */
+
+.nook-meter-tile,
+.nook-devices-card,
+.nook-wifi-card,
+.nook-tray-mirror,
+.nook-calendar-summary,
+.nook-alert-card,
+.nook-shelf-row {
+    background-color: rgba(255,255,255,0.055) !important;
+
+    border: 1px solid rgba(255,255,255,0.065) !important;
+
+    border-radius: 16px !important;
+
+    box-shadow: none !important;
+}
+
+.nook-meter-tile {
+    padding: 11px 5px !important;
+}
+
+.nook-devices-card,
+.nook-wifi-card {
+    border-radius: 17px !important;
+}
+
+
+/* ---------------------------------------------------------
+   MACOS SYSTEM BLUE
+   --------------------------------------------------------- */
+
+.nook-eyebrow,
+.nook-tab-count,
+.nook-meter-label-row,
+.notchnux-tab-btn-active .notchnux-tab-icon {
+    color: #0a84ff !important;
+}
+
+.nook-mini-toggle-on,
+.nook-wifi-hotspot-on {
+    background-color: rgba(10,132,255,0.28) !important;
+    color: #ffffff !important;
+}
+
+
+/* ---------------------------------------------------------
+   CONTROL CENTER TOGGLES
+   --------------------------------------------------------- */
+
+.nook-toggle {
+    background-color: rgba(255,255,255,0.075) !important;
+
+    border: 0px !important;
+
+    border-radius: 16px !important;
+
+    color: rgba(255,255,255,0.82) !important;
+}
+
+.nook-toggle:hover {
+    background-color: rgba(255,255,255,0.12) !important;
+}
+
+.nook-toggle-on {
+    background-color: rgba(10,132,255,0.30) !important;
+
+    border: 0px !important;
+
+    color: #ffffff !important;
+}
+
+/* Kill the Linux-looking flower/petal shape */
+.nook-arm-top,
+.nook-arm-bottom,
+.nook-arm-left,
+.nook-arm-right {
+    border-radius: 16px !important;
+}
+
+.nook-air-btn {
+    background-color: rgba(255,255,255,0.09) !important;
+
+    border: 0px !important;
+
+    color: rgba(255,255,255,0.84) !important;
+}
+
+.nook-air-on {
+    background-color: #0a84ff !important;
+    color: white !important;
+}
+
+
+/* ---------------------------------------------------------
+   MENU BAR MIRROR
+   --------------------------------------------------------- */
+
+.nook-tray-mirror {
+    padding: 10px 12px !important;
+}
+
+.nook-tray-mirror-row {
+    spacing: 7px !important;
+}
+
+.nook-tray-mirror-btn {
+    width: 28px !important;
+    height: 28px !important;
+
+    padding: 0px !important;
+
+    border-radius: 9px !important;
+
+    background-color: transparent !important;
+}
+
+.nook-tray-mirror-btn:hover {
+    background-color: rgba(255,255,255,0.10) !important;
+}
+
+.nook-tray-mirror-icon {
+    color: rgba(255,255,255,0.90) !important;
+}
+
+
+/* ---------------------------------------------------------
+   TYPOGRAPHY
+   --------------------------------------------------------- */
+
+.nook-card-eyebrow {
+    color: rgba(255,255,255,0.42) !important;
+
+    font-size: 10px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 1px !important;
+}
+
+.nook-device-name,
+.nook-wifi-name {
+    color: rgba(255,255,255,0.92) !important;
+}
+
+.nook-device-pct,
+.nook-wifi-sub {
+    color: rgba(255,255,255,0.48) !important;
+}
+
+.notchnux-panel {
+    spacing: 14px !important;
+}
+
+
+/* PULSAR_DUAL_AMOLED_V1 */
+
+/* Actual MacBook-notch black */
+.notchnux-island {
+    background-color: #000000 !important;
+    border-top: 0px !important;
+}
+
+/* Expanded Control Center — ALSO true AMOLED black */
+.notchnux-island-expanded {
+    background-color: #000000 !important;
+    border-top: 0px !important;
+}
+
+/* Notification / temporary expansion */
+.notchnux-island-peek {
+    background-color: #000000 !important;
+    border-top: 0px !important;
+}
+
+/* Keep the inner modules subtly separated like macOS Control Center */
+.notchnux-island-expanded .nook-meter-tile,
+.notchnux-island-expanded .nook-devices-card,
+.notchnux-island-expanded .nook-wifi-card,
+.notchnux-island-expanded .nook-tray-mirror {
+    background-color: rgba(255,255,255,0.065) !important;
+}
+
+/* PULSAR_ROUNDED_NOTCH_SHADOW_V1 ------------------------------------- *
+ * The island hangs flush off the top edge, so its top corners are square
+ * (border-radius 0 0 Npx Npx). A heavy y-offset + small blur makes the drop
+ * shadow read as a hard rectangular slab with square side edges. Keep the
+ * blur generous and the vertical offset small so the shadow wraps the
+ * curved bottom corners as an even, rounded cloud instead of a box.        */
+.notchnux-island {
+    border-radius: 0px 0px 20px 20px !important;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.38) !important;
+}
+
+.notchnux-island-expanded {
+    border-radius: 0px 0px 28px 28px !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.42) !important;
+}
+
+.notchnux-island-peek {
+    border-radius: 0px 0px 22px 22px !important;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.38) !important;
 }
